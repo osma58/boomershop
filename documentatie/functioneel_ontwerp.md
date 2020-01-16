@@ -46,4 +46,9 @@ Een pizza webshop bouwen voor Boomershop, zodat Boomershop gemakkelijk pizza's k
   Een form waar je kan inloggen op Boomershop
   
   
-
+## TO DO:
+### Orders (Lijst met alle orders die open staan)
+### Current order (Als persoon een order bezorgt een kaart bijv)
+### Product lijst voor klant om te zien wat hij heeft in zn winkelwaggie
+### Bestel eind page waar je gegevens in vult
+### CMS voor het maken en verwijder product
