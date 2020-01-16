@@ -25,24 +25,24 @@ Een pizza webshop bouwen voor Boomershop, zodat Boomershop gemakkelijk pizza's k
       - Winkelmandje
       - Account
 
-#### Home
+#### - Home
   Lijst van aanbiedingen, waar je op kan klikken om dan te bestellen of toe te voegen aan winkelmandje.
   
-#### Menu
+#### - Menu
   Je kan je locatie invoeren om dichtbijzijnde aanbiedingen te bekijken.
   Lijst van pizzas, waar je op kan klikken om dan te bestellen of toe te voegen aan winkelmandje.
   
-#### Aanbiedingen
+#### - Aanbiedingen
   Een lijst van aanbiedingen op het menu, waar je op kan klikken om dan te bestellen of toe te voegen aan winkelmandje.
   
-#### Aanbieders
+#### - Aanbieders
   Dichtbijzijnde aanbieders bekijken, door een locatie in te voeren.
     - Postcode of stad
     
-#### Sign up
+#### - Sign up
   Een form waar je een account kan aanmaken op Boomershop
 
-#### Sign in
+#### - Sign in
   Een form waar je kan inloggen op Boomershop
   
   
