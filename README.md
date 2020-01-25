@@ -8,7 +8,7 @@ K_SEC Project | A pizza webshop
 - [x] Dashboard voor alle gebruikers
 
 - [x] Functioneel ontwerp
-- [ ] Technisch ontwerp
+- [x] Technisch ontwerp
 - [x] Thread model
 
 - [ ] Test plan
