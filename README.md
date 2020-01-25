@@ -1,7 +1,7 @@
 # boomershop
 K_SEC Project | A pizza webshop
 
-##Todo:
+## Todo:
 - [x] Use case tabel
 - [x] Use cases uitgewerkt
 - [x] Use case diagram
