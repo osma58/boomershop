@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'BoomerShop') }}</title>
+    <title>BoomerShop</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    @yield('styles');
+    @yield('styles')
 </head>
 <body>
 
@@ -27,7 +27,7 @@
         @csrf
     </form>
 </body>
-    @yield('scripts');
+    @yield('scripts')
     <script>
         function logout () {
             event.preventDefault()
