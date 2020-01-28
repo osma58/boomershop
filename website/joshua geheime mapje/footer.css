@@ -1,1 +1,19 @@
-/* No CSS *//*# sourceMappingURL=footer.css.map */
+body {
+  margin: 0;
+}
+
+body footer {
+  background-color: #424242;
+  color: #FFF;
+  font-family: PT Sans, sans-serif;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+body footer p {
+  font-size: 1.2em;
+  color: #C3C3C3;
+  text-align: center;
+}
+/*# sourceMappingURL=footer.css.map */
