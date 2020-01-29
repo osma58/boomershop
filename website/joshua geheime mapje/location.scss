@@ -21,9 +21,25 @@ body {
             font-size: 1em;
             margin-top: 1em;
         }
-        .inputdiv label {
-            pointer-events: none;
-            position: absolute;
+        .inputdiv {
+            margin-top: .7em;
+            position: relative;
+            label {
+                pointer-events: none;
+                position: absolute;
+                left: 0;
+                font-size: .8em;
+                color: #DDD;
+            }
+            input::placeholder {
+                color: #DDD;
+            }
+            input:focus {
+                border-color: #FE2F90;
+            }
+            input:focus~label {
+                color: #FE2F90;
+            }
         }
     }
 }
