@@ -1,0 +1,157 @@
+*{
+  font-family: 'PT Sans', sans-serif;
+}
+body {
+  margin: 0;
+}
+
+body img {
+  max-height: 100%;
+}
+
+body header {
+  padding: .5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #424242;
+  color: #FFF;
+  font-family: PT Sans, sans-serif;
+}
+
+body header * {
+  display: inline-block;
+  font-size: 1.1em;
+  vertical-align: middle;
+  margin: 0;
+}
+
+body header a {
+  font-family: Vladimir Script, sans-serif;
+  font-size: 2.5em;
+  color: #FFF;
+}
+
+body header a h1 {
+  margin-left: 3em;
+}
+
+body header ul {
+  text-align: center;
+}
+
+body header ul li {
+  display: inline-block;
+  color: #C3C3C3;
+  margin-left: 1em;
+}
+
+body header ul li:hover {
+  color: #FFF;
+}
+
+body header ul li:active {
+  color: #FFF;
+}
+
+body header ul li.active {
+  color: #FFF;
+}
+
+body header button {
+  color: #C3C3C3;
+  border: solid 0px transparent;
+  background-color: transparent;
+  padding: .5em 1.5em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+body header button.active {
+  background-color: #FE2F90;
+  color: #FFF;
+}
+
+body header .right {
+  margin-left: auto;
+  margin-right: 3em;
+}
+
+body header .right .cart img {
+  height: 2em;
+  width: 2em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+body header .right .cart p {
+  height: 1em;
+  width: 1em;
+  background-color: #FE2F90;
+  border-radius: 999em;
+  text-align: center;
+  padding: .2em;
+  position: relative;
+  left: -1em;
+  top: -1em;
+  font-size: .8em;
+}
+
+body {
+  margin: 0;
+}
+
+body footer {
+  background-color: #424242;
+  color: #FFF;
+  font-family: PT Sans, sans-serif;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+body footer p {
+  font-size: 1.2em;
+  color: #C3C3C3;
+  text-align: center;
+}
+
+
+/* DE CSS DIE IK HEB GEBRUIKT! */
+
+.aanbieding{
+text-align: center;
+border: 0.8px solid black;
+width: 800px;
+height: 100px;
+margin-left: 18em;
+padding: 30px;
+
+}
+h4{
+  font-weight: bold;
+  padding-right: 28.5em;
+  font-size: 18px;
+}
+
+.overzicht{
+
+  background-color: #F6F6F6;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-gap: 20px;
+  padding-left: 5em;
+}
+.box {
+  text-align: center;
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    float: left;
+    background-color: #CECECE;
+    display: flex;
+  flex-wrap: nowrap;
+}
