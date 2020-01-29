@@ -13,7 +13,34 @@
 <body>
 
     <header>
+        <div class="title">
+            <a href="/">
+                <h1>BoomerShop</h1>
+            </a>
+        </div>
+        <div class="middle">
+            <ul>
+                <a href="/menu"><li class="@if(\Request::route()->getName()=='menu') active @endif">Menu</li></a>
+                <a href="/aanbiedingen" class="@if(\Request::route()->getName()=='aanbiedingen') active @endif"><li>Aanbiedingen</li></a>
+                <a href="/aanbieders" class="@if(\Request::route()->getName()=='aanbieders') active @endif"><li>Aanbieders</li></a>
+            </ul>
+        </div>
+        <div class="right">
+            <a href="/winkelmandje">
+                <div class="cart">
+                    <img src="img/shoppingcart.png" alt="">
+                    <span>
+                        @if (false)
 
+                        @else
+                            0
+                        @endif
+                    </span>
+                </div>
+            </a>
+            <a href="login"><button>Sign in</button></a>
+            <a href="register"><button class="active">Sign up</button></a>
+        </div>
     </header>
 
     <main>
@@ -21,6 +48,7 @@
     </main>
 
     <footer>
+        <p>&#169; 2019 BoomerShop - Amsterdam</p>
     </footer>
 
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

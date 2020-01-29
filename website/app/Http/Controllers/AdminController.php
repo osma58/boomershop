@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
 
 class AdminController extends Controller
 {
@@ -16,8 +17,36 @@ class AdminController extends Controller
         $this->middleware('auth:admin');
     }
 
-    public function dashboard()
+    public function index()
     {
-        return view('admin.dashboard');
+
+        $products = Product::all();
+        $product__inputs = [
+            (object) [
+                'name' => 'titel',
+                'type' => 'text',
+                'required' => true
+            ],
+            (object) [
+                'name' => 'photo',
+                'type' => 'file',
+                'required' => true
+            ],
+            (object) [
+                'name' => 'prijs',
+                'type' => 'number',
+                'required' => true
+            ],
+            (object) [
+                'name' => 'korting',
+                'type' => 'number',
+                'required' => false
+            ]
+        ];
+
+        return view('admin.dashboard', [
+            'products' => $products,
+            'product__inputs' => $product__inputs
+        ]);
     }
 }
