@@ -52,7 +52,7 @@
                     <td class="total">€12</td>
                     <td><img class="cross" src="cross.svg"></td>
                 </tr>
-                <tr class="last">
+                <tr>
                     <td></td>
                     <td></td>
                     <td></td>
