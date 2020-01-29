@@ -27,8 +27,40 @@ body main .function {
   margin-top: 1em;
 }
 
+body main .inputdiv {
+  margin-top: .7em;
+  position: relative;
+}
+
 body main .inputdiv label {
   pointer-events: none;
   position: absolute;
+  left: 0;
+  font-size: .8em;
+  color: #DDD;
+}
+
+body main .inputdiv input::-webkit-input-placeholder {
+  color: #DDD;
+}
+
+body main .inputdiv input:-ms-input-placeholder {
+  color: #DDD;
+}
+
+body main .inputdiv input::-ms-input-placeholder {
+  color: #DDD;
+}
+
+body main .inputdiv input::placeholder {
+  color: #DDD;
+}
+
+body main .inputdiv input:focus {
+  border-color: #FE2F90;
+}
+
+body main .inputdiv input:focus ~ label {
+  color: #FE2F90;
 }
 /*# sourceMappingURL=location.css.map */

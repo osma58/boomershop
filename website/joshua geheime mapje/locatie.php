@@ -38,8 +38,16 @@
         <h2>Locatie</h2>
         <form action="POST">
             <div class="inputdiv">
-                <input type="text" name="postcode" id="" autocomplete="off">
-                <label for="postcode">Yeet</label>
+                <input placeholder="bv. 6969OK" type="text" name="postcode" id="" autocomplete="off" autofocus required>
+                <label for="postcode">Postcode*</label>
+            </div>
+            <div class="inputdiv">
+                <input placeholder="bv. 420" type="text" name="huisnummer" id="" autocomplete="off" required>
+                <label for="huisnummer">Huisnummer*</label>
+            </div>
+            <div class="inputdiv">
+                <input placeholder="bv. A" type="text" name="toevoegingen" id="" autocomplete="off">
+                <label for="toevoegingen">Toevoegingen*</label>
             </div>
         </form>
         <button style="background: #424242;" class="function">Vorige</button>
