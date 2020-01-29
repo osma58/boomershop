@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Cart;
 use App\Product;
+use Illuminate\Support\Facades\Storage;
 
 class ShoppingcartController extends Controller
 {
@@ -23,7 +24,30 @@ class ShoppingcartController extends Controller
 
     private function getCart()
     {
-        return json_decode($_COOKIE['shoppingCart']);
+        $product_cookie_ids = json_decode($_COOKIE['shoppingCart'])->items;
+        $cart = (object) [
+            'products' => []
+        ];
+        foreach ($product_cookie_ids as $item) {
+            $class = Product::find($item->id);
+            if ($class) {
+                $alreadyExists = false;
+                foreach ($cart->products as $p) {
+                    if ($p->id == $class->id)
+                        $alreadyExists = true;
+                }
+                if (!$alreadyExists) {
+                    $product = (object) [
+                        'id' => $class->id,
+                        'titel' => $class->titel,
+                        'price' => $class->price,
+                        'quantity' => 1
+                    ];
+                    array_push($cart->products, $product);
+                }
+            }
+        }
+        return $cart;
     }
 
     private function postCart()
@@ -33,7 +57,9 @@ class ShoppingcartController extends Controller
 
     public function index()
     {
-        $products = Product::all();
+        $cart = $this->getCart();
+        dd($cart);
+
         return view('winkelmandje', [
             'products' => $products
         ]);

@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 </head>
 <body>
-    h1
-    <form action="{{ route('admin.store') }}">
+    <h1>Dashboard</h1>
+    <form action="{{ route('admin.store') }}" class="form" method="POST" enctype="multipart/form-data">
         @csrf
         @foreach ($product__inputs as $input)
-        <div>
-            <span>{{$input->name}}</span>
-            <input type="{{ $input->name }}" @if($input->required) required @endif autocomplete="off" autofocus name="{{$input->name}}">
+        <div class="form__item-box">
+            <span class="form__span">{{$input->name}}</span>
+            <input class="form__input" type="{{ $input->type }}" @if($input->required) required @endif autocomplete="off" autofocus name="{{$input->name}}" value="{{@old($input->name)}}">
 
-            @error('{{$input->}}')
+            @error($input->name)
                 <span>
                     <strong>{{ $message }}</strong>
                 </span>

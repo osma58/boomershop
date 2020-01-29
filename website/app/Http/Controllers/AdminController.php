@@ -36,11 +36,6 @@ class AdminController extends Controller
                 'name' => 'prijs',
                 'type' => 'number',
                 'required' => true
-            ],
-            (object) [
-                'name' => 'korting',
-                'type' => 'number',
-                'required' => false
             ]
         ];
 

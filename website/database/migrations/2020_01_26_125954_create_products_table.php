@@ -19,7 +19,6 @@ class CreateProductsTable extends Migration
             $table->string('titel');
             $table->string('photo');
             $table->integer('prijs');
-            $table->interger('korting')->nullable();
         });
     }
 

@@ -10,18 +10,19 @@ class ProductController extends Controller
 {
     public function store()
     {
+
         $data = request()->validate([
-            'titel' => ['required', 'min:3', 'max:60'],
+            'titel' => ['required', 'string', 'max:250'],
             'photo' => ['required', 'image'],
             'prijs' => ['required', 'integer'],
-            'korting' => ['integer']
         ]);
+
+        $imgPath = request('photo')->store('pizzas', 'public');
 
         $p = new Product;
         $p->titel = $data['titel'];
-        $p->photo = $data['photo'];
+        $p->photo = $imgPath;
         $p->prijs = $data['prijs'];
-        $p->korting = $data['korting'];
 
         $p->save();
 

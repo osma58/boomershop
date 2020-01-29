@@ -19,10 +19,11 @@ Route::get('/winkelmandje/delete/{id}', 'ShoppingcartController@delete')->name('
 
 Route::prefix('admin')->group(function() {
     Route::group(['middleware' => 'auth:admin'], function () {
-        Route::get('', 'AdminController@index')->name('admin.index');
-        Route::get('/', 'AdminController@index')->name('admin.index');
+        Route::get('/', function() { return redirect()->route('admin.index'); });
 
-        Route::post('', 'AdminController@index')->name('admin.store');
+        Route::get('', 'AdminController@index')->name('admin.index');
+
+        Route::post('/store', 'ProductController@store')->name('admin.store');
     });
 
     Route::get('/login', 'Auth\AdminloginController@show')->name('admin.login');

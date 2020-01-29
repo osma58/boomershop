@@ -1,0 +1,17 @@
+html, body {
+    font-family: sans-serif;
+}
+
+.form {
+    max-width: 500px;
+}
+
+.form__item-box {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.form__span {
+    text-transform: capitalize;
+}
