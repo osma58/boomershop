@@ -29,7 +29,7 @@ class AdminloginController extends Controller
             'email' => request('email'),
             'password' => request('password'),
         ], request('remember'))) {
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('admin.index');
         }
 
         return redirect()->back()->withInput(request()->only('email', 'remember'));

@@ -11,6 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        DB::table('products')->insert([
+            $table->bigIncrements('id'),
+            $table->timestamps(),
+            $table->string('titel'),
+            $table->string('photo'),
+            $table->float('prijs'),
+            $table->interger('korting')->nullable()
+        ]);
     }
 }
