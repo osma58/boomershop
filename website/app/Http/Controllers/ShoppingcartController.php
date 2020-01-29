@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Cart;
 use App\Product;
-use Illuminate\Support\Facades\Storage;
 
 class ShoppingcartController extends Controller
 {
@@ -58,10 +57,9 @@ class ShoppingcartController extends Controller
     public function index()
     {
         $cart = $this->getCart();
-        dd($cart);
 
         return view('winkelmandje', [
-            'products' => $products
+            // 'products' => $products
         ]);
     }
 

@@ -22,7 +22,6 @@
             <ul>
                 <a href="/menu"><li class="@if(\Request::route()->getName()=='menu') active @endif">Menu</li></a>
                 <a href="/aanbiedingen" class="@if(\Request::route()->getName()=='aanbiedingen') active @endif"><li>Aanbiedingen</li></a>
-                <a href="/aanbieders" class="@if(\Request::route()->getName()=='aanbieders') active @endif"><li>Aanbieders</li></a>
             </ul>
         </div>
         <div class="right">

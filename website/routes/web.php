@@ -8,7 +8,6 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/menu', 'MenuController@index')->name('menu');
 
 Route::get('/aanbiedingen', 'AanbiedingenController@index')->name('aanbiedingen');
-Route::get('/aanbieders', 'AanbiedersController@index')->name('aanbieders');
 
 Route::get('/winkelmandje', 'ShoppingcartController@index')->name('cart');
 Route::get('/winkelmandje/add/{id}', 'ShoppingcartController@store')->name('cart.add');

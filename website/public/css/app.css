@@ -133,49 +133,46 @@ body footer p {
   text-align: center;
 }
 
-body {
+.winkelmandje {
   font-family: PT Sans, sans-serif;
-}
-
-body main {
   display: grid;
   grid-column-gap: 4em;
   grid-template-columns: 70% 30%;
   padding: 0 15em;
 }
 
-body main hr {
+.winkelmandje hr {
   grid-column: 1/3;
   margin-top: 2em;
 }
 
-body main .sidebar {
+.winkelmandje .sidebar {
   background-color: #F8F8F8;
   padding: 0 1.5em;
   box-shadow: 0px 2px 5px 1px #e6e6e6;
 }
 
-body main .sidebar table {
+.winkelmandje .sidebar table {
   width: 100%;
 }
 
-body main .sidebar table td.item {
+.winkelmandje .sidebar table td.item {
   color: #919191;
 }
 
-body main .sidebar table td.price {
+.winkelmandje .sidebar table td.price {
   text-align: right;
 }
 
-body main .sidebar table td {
+.winkelmandje .sidebar table td {
   padding: 1em 0;
 }
 
-body main .sidebar h3 {
+.winkelmandje .sidebar h3 {
   font-size: 1.4em;
 }
 
-body main .sidebar button {
+.winkelmandje .sidebar button {
   font-size: 1.1em;
   color: #FFF;
   background-color: #FE2F90;
@@ -186,32 +183,32 @@ body main .sidebar button {
   font-weight: 600;
 }
 
-body main .contents table {
+.winkelmandje .contents table {
   border-collapse: collapse;
   width: 100%;
 }
 
-body main .contents table,
-body main .contents td,
-body main .contents th {
+.winkelmandje .contents table,
+.winkelmandje .contents td,
+.winkelmandje .contents th {
   border-bottom: 1px solid #f5f5f5;
 }
 
-body main .contents td,
-body main .contents th {
+.winkelmandje .contents td,
+.winkelmandje .contents th {
   padding: 1em 0;
 }
 
-body main .contents th {
+.winkelmandje .contents th {
   color: #919191;
 }
 
-body main .contents td {
+.winkelmandje .contents td {
   font-weight: bold;
   width: 25%;
 }
 
-body main .contents td img {
+.winkelmandje .contents td img {
   margin: 0 1em;
   height: 0.8em;
   width: 0.8em;
@@ -219,19 +216,19 @@ body main .contents td img {
      object-fit: contain;
 }
 
-body main .contents td .cross {
+.winkelmandje .contents td .cross {
   margin: 0;
   height: 1.2em;
   width: 1.2em;
 }
 
-body main .contents .last {
+.winkelmandje .contents .last {
   border-bottom: none;
 }
 
-body main .contents .total,
-body main .contents .price,
-body main .contents .quantity {
+.winkelmandje .contents .total,
+.winkelmandje .contents .price,
+.winkelmandje .contents .quantity {
   font-size: 1.4em;
   text-align: center;
 }

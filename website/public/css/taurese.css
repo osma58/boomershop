@@ -1,0 +1,63 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto 0;
+  font-family: PT Sans, sans-serif;
+}
+
+/* DE CSS DIE IK HEB GEBRUIKT! */
+.aanbieding {
+    position: relative;
+    border: 0.8px solid black;
+    width: 100%;
+    height: 100px;
+    padding: 20px 0;
+}
+
+.aanbieding__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aanbieding .title {
+  color: #666666;
+  font-size: 1.4em;
+  margin: 0;
+}
+
+.aanbieding h4 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+}
+
+.overzicht {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #F6F6F6;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  background-color: #CECECE;
+}

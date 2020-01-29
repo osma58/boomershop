@@ -26,5 +26,17 @@
 
         <button type='submit'>submit</button>
     </form>
+
+    <a type="button" onclick="logout()">logout</a>
+
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
 </body>
+    <script>
+        function logout () {
+            event.preventDefault()
+            document.querySelector('#logout-form').submit()
+        }
+    </script>
 </html>
