@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App;
 
-use Illuminate\Http\Request;
-use Cart;
+use Illuminate\Database\Eloquent\Model;
 use App\Product;
 
-class ShoppingcartController extends Controller
+class Shoppingcart extends Model
 {
     public function __construct()
     {
@@ -21,14 +20,14 @@ class ShoppingcartController extends Controller
         }
     }
 
-    private function getCart()
+    public function getCart()
     {
         $product_cookie_ids = json_decode($_COOKIE['shoppingCart'])->items;
         $cart = (object) [
             'products' => []
         ];
-        foreach ($product_cookie_ids as $item) {
-            $class = Product::find($item->id);
+        foreach ($product_cookie_ids as $id) {
+            $class = Product::find($id);
             if ($class) {
                 $alreadyExists = false;
                 foreach ($cart->products as $p) {
@@ -39,7 +38,7 @@ class ShoppingcartController extends Controller
                     $product = (object) [
                         'id' => $class->id,
                         'titel' => $class->titel,
-                        'price' => $class->price,
+                        'price' => $class->prijs,
                         'quantity' => 1
                     ];
                     array_push($cart->products, $product);
@@ -49,32 +48,45 @@ class ShoppingcartController extends Controller
         return $cart;
     }
 
-    private function postCart()
-    {
-        //
+    public function count() {
+        return count($this->getCart()->products);
     }
 
-    public function index()
-    {
-        $cart = $this->getCart();
-
-        return view('winkelmandje', [
-            // 'products' => $products
-        ]);
+    public function totalPrice() {
+        $total = 0;
+        foreach($this->getCart()->products as $product)
+        {
+            $total += $product->price;
+        }
+        return $total;
     }
 
-    public function store($id)
+    public function addProduct($id)
     {
-        $cart = $this->getCookies();
-
-        var_dump($cart);
-
+        $cart = json_decode($_COOKIE['shoppingCart']);
+        array_push($cart->items, $id);
+        setcookie('shoppingCart', json_encode($cart), time() + (86400 * 30), "/");
         return redirect()->back();
     }
 
-    public function delete($id)
+    public function deleteProduct($id)
     {
+        $cart = json_decode($_COOKIE['shoppingCart']);
+        $newItemsArray = [];
+        $quantity = false;
 
+        foreach($cart->items as $key => $item)
+        {
+            if (!$quantity && $item == $id) {
+                $quantity = true;
+            } else {
+                array_push($newItemsArray, $item);
+            }
+        }
+
+        $cart->items = $newItemsArray;
+
+        setcookie('shoppingCart', json_encode($cart), time() + (86400 * 30), "/");
         return redirect()->back();
     }
 }

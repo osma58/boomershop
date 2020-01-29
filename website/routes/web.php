@@ -9,9 +9,9 @@ Route::get('/menu', 'MenuController@index')->name('menu');
 
 Route::get('/aanbiedingen', 'AanbiedingenController@index')->name('aanbiedingen');
 
-Route::get('/winkelmandje', 'ShoppingcartController@index')->name('cart');
-Route::get('/winkelmandje/add/{id}', 'ShoppingcartController@store')->name('cart.add');
-Route::get('/winkelmandje/delete/{id}', 'ShoppingcartController@delete')->name('cart.delete');
+Route::get('/winkelmandje', 'MandjeController@index')->name('cart');
+Route::get('/winkelmandje/add/{id}', 'MandjeController@store')->name('cart.add');
+Route::get('/winkelmandje/delete/{id}', 'MandjeController@delete')->name('cart.delete');
 
 // Route::get('/account', 'AccountController@index')->name('account.index'); /* === Account === */
 // Route::post('/account', 'AccountController@edit')->name('account.edit');

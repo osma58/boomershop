@@ -27,13 +27,13 @@
         <div class="right">
             <a href="/winkelmandje">
                 <div class="cart">
-                    <img src="img/shoppingcart.png" alt="">
+                    <img src="img/shoppingcart.png" alt="shopping cart icon">
                     <span>
-                        @if (false)
-
-                        @else
-                            0
-                        @endif
+                        @php
+                            use App\Shoppingcart;
+                            $Shoppingcart = new Shoppingcart;
+                        @endphp
+                        {{ $Shoppingcart->count() }}
                     </span>
                 </div>
             </a>

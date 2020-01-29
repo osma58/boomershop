@@ -15,30 +15,31 @@
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Total</th>
-            {{-- </tr>
+            </tr>
             @foreach ($products as $product)
                 <tr>
-                    <td class="product">{{$product->name}}</td>
-                    <td class="price">{{$product->price}}</td>
+                    <td class="product">{{$product->titel}}</td>
+                    <td class="price">€{{$product->price}}</td>
                     <td class="quantity"><img src="img/plus.svg">{{$product->quantity}}<img src="img/minus.svg"></tdc>
-                    <td class="total">{{$product->price * $product->quantity}}</td>
-                    <td><a href="{{ route('')}}"><img class="cross" src="img/cross.svg"></td>
+                    <td class="total">€{{$product->price * $product->quantity}}</td>
+                    <td><a href="{{ route('cart.delete', $product->id)}}"><img class="cross" src="img/cross.svg"></td>
                 </tr>
-            @endforeach --}}
+            @endforeach
             <tr class="last">
                 <td></td>
                 <td></td>
                 <td></td>
-                <td class="total">€12</td>
+                <td class="total">€{{ $total }}</td>
             </tr>
         </table>
     </div>
     <div class="sidebar">
         <h3>Bestelling</h3>
+        @if (count($products))
         <table>
             <tr class="products">
                 <td class="item">Producten</td>
-                <td class="price">€12,95</td>
+                <td class="price">{{$total}}</td>
             </tr>
             <tr class="shipping">
                 <td class="item">Shipping</td>
@@ -46,7 +47,7 @@
             </tr>
             <tr class="total">
                 <td class="item">Totaal</td>
-                <td class="price">€15,95</td>
+                <td class="price">{{$total + 3}}</td>
             </tr>
         </table>
         <a href="">
@@ -54,6 +55,10 @@
                 Volgende
             </button>
         </a>
+        @else
+            Je hebt nog geen producten geselecteerd.<br><br>
+            <a href="{{ route('menu') }}" style="color: #FE2F90;">Terug naar menu</a>
+        @endif
     </div>
 </div>
 @endsection

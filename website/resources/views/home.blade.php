@@ -17,14 +17,16 @@
     <span style="display:block; height: 35px;"></span>
     <h2>Aanbiedingen:</h2>
     <div class="overzicht">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+        @foreach ($products as $product)
+            <a href="{{route('cart.add', $product->id)}}">
+                <div class="product">
+                    <div class="product__image">
+                        <img src="{{'storage/'.$product->photo}}" alt="">
+                    </div>
+                    <span class="product__price">Nu €{{$product->prijs}}</span>
+                </div>
+            </a>
+        @endforeach
     </div>
 </div>
 @endsection
